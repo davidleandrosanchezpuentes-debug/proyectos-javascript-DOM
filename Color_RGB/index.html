@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="../src/circulo-de-color.png">
+    <title>Colores Con RGV</title>
+</head>
+<body>
+    <section class="contenedor__principal">
+        <div class="contenedor__interno">
+            <div class="color">
+                <label for="Rojo">Rojo (R)</label>
+                <input id="rojo" type="range" min="0" max="255" value="23">
+                <p class="texto__rojo"></p>
+            </div>
+
+            <div class="color">
+                <label for="verde">Verde (G)</label>
+                <input id="verde" type="range" min="0" max="255" value="41">
+                <p class="texto__verde"></p>
+            </div>
+
+
+
+            <div class="color">
+                <label for="Azul">Azul (B)</label>
+                <input id="azul" type="range" min="0" max="255" value="56">
+                <p class="texto__azul"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
