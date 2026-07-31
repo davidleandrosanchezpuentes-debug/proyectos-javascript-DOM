@@ -64,7 +64,7 @@ const reiniarCronometro = () =>{
 
   horas = 0
   minutos = 0 
-  segundo = 0
+  segundos = 0
 
   botonIP.innerHTML = '<i class="bi bi-play-fill"></i>'
   botonIP.classList.remove('pausar')
