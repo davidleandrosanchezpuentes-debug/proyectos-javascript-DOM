@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', 'Montserrat', 'Courgette', sans-serif ;
+  font-size: 12px;
+}
+
+body{
+  font-size: 10px;
+  font-weight: bold;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0;
+  background-image: radial-gradient( #222, #111111);
+}
+
+/* Contenedor */
+
+.contenedor{
+  width: clamp(200px, 80vw, 600px);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(0, 55, 149, 0.467) 40% , rgb(9, 54, 159));
+  border: 2px solid #ccc;
+}
+
+.title{
+  color: #ccc;
+  font-size: 3em;
+  padding: 2rem;
+  text-wrap: balance;
+}
+
+#ingresar__tarea{
+  display: block;
+  width: clamp(100px, 70vw, 500px);
+  padding: 6px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #ccc;
+  border-left: 5px solid #ccc;
+  border-radius: 10px;
+  outline: 1px solid transparent; 
+  font-size: 1.8rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+#ingresar__tarea:focus-visible{
+  outline-color: transparent;
+  border: 1px solid #ccc;
+  box-shadow: -2px 1px 2px 2px #ccc;
+  border-radius: 10px;
+}
+
+#ingresar__tarea::placeholder{
+  color: #ccc;
+}
+
+.btn{
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: #ddddff;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.btn:hover{
+  background-color: #ccccff;
+}
+
+#lista__Tareas{
+  width: clamp(100px, 80vw, 500px);
+  margin-top: 1.2rem;
+  padding: 10px;
+}
+
+
+/* Elementos que crearemos en JS */
+
+
+.tarea{
+  width: 100%;
+  min-height: 40px;
+  padding: 6px;
+  margin-top: 1em;
+  background-color: #6663;
+  display: flex;
+  gap: 5px;
+  margin: 15px 0;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Tareas completadas */
+
+.tarea.completada {
+  background-color: #0006;
+  text-decoration: line-through;
+  color: #fff;
+}
+
+
+.tarea p {
+  max-width: 350px;
+  font-size: 1.4rem;
+  padding: 3px;
+  color: #ccc;
+}
+
+/* Iconos */
+
+.iconos{
+  background-color: transparent;
+}
+
+i {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icono__completada{
+  color: #8a5;
+  background-color: transparent;
+}
+
+.icono__eliminar{
+  color: #ccc;
+  background-color: transparent;
+}
+

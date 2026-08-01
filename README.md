@@ -19,6 +19,7 @@ A continuación se detalla la lista de proyectos incluidos en este repositorio:
 | 02 | **Color Hexadecimal** | Genera y aplica códigos de color en hexadecimal al fondo en tiempo real. | HTML, CSS, JS | [Ver Proyecto](./Color_Hexadecimal) |
 | 03 | **Color RGB** | Permite ajustar dinámicamente los valores de **Rojo (R)**, **Verde (G)** y **Azul (B)** del fondo mediante controles de rango. | HTML, CSS, JS | [Ver Proyecto](./Color_RGB) |
 | 04 | **Crósnometro Responsivo** | Aplicación de cronómetro dinámico con diseño adaptable.| HTML, CSS, JS | [Ver Proyecto](./Cronometro) |
+| 05 | **Lista de Tareas** | Aplicación de lista de tareas (To-Do List) que permite agregar, marcar como completadas y eliminar tareas dinámicamente.| HTML, CSS, JS | [Ver Proyecto](./Lista%20de%20Tareas) |
 
 *(Esta tabla se irá actualizando conforme se añadan más proyectos).*
 
