@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.root{
+    background-color: #ededed;
+}
+
+.container{
+    width: 100%;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ededed;
+}
+
+.contenedor--central{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 800px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.image__logo{
+    order: 3;
+}
+
+.image__logo .img{
+    max-width: 80px;
+}
+
+.menu__btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    order: 2;
+}
+
+.menu__btn span{
+    font-size: 3em;
+}
+
+.navbar{
+    order: 1;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    width: 100%;
+    background-color: #222d;
+    height: calc(100dvh - 100%);
+    display: none;
+}
+
+.navbar__list{
+    font-size: 2em;
+    background-color: #468;
+    padding: 10px;
+    color: #ddd;
+}
+
+.list__item{
+    font-weight: bolder;
+}
+
+.list__item span{
+    font-size: 1.3em;
+}
+
+.list__item a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.list__item a:hover{
+    background-color: #57a;
+
+}
+
+.navbar.is-active{
+    display: flex;
+}
+
+
+
+
+
+/* Sona de Main */
+
+.main__container{
+    min-width: 100%;
+    background-color: #cccc;
+}
+
+.data__container{
+    width: clamp(400px, 30vw, 600px);
+    margin: auto;
+    font-size: 16px;
+    order: 2;
+}
+
+.title {
+    font-size: 3em;
+    text-wrap: balance;
+    margin-top: 20px;
+}
+
+.title span {
+    color: #468;
+}
+
+.data__container p{
+    text-wrap: pretty;
+    font-size: 1.6em;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.img__perfil{
+    margin: auto;
+}
