@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 li{
@@ -14,6 +15,9 @@ a{
 }
 
 .root{
+    container-type: inline-size;
+    container-name: root;
+    overflow: hidden;
     background-color: #ededed;
 }
 
@@ -33,8 +37,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
     flex-wrap: wrap;
     position: relative;
 }
@@ -44,7 +47,8 @@ a{
 }
 
 .image__logo .img{
-    max-width: 80px;
+    max-width: 60px;
+    cursor: pointer;
 }
 
 .menu__btn{
@@ -70,7 +74,6 @@ a{
 }
 
 .navbar__list{
-    font-size: 2em;
     background-color: #468;
     padding: 10px;
     color: #ddd;
@@ -89,7 +92,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 1.5em;
+    font-size: 1.3em;
     border-radius: 50px;
     margin: 10px 0;
     padding: 10px 15px;
@@ -105,14 +109,66 @@ a{
 }
 
 
+/* Media */
 
+@container root (min-width: 650px){
+
+.image__logo{
+    order: 1;
+}
+
+.image__logo .img{
+    max-width: 80px;
+}
+
+.menu__btn{
+    display: none;
+}
+
+.navbar{
+    order: 2;
+    position: static;
+    width: auto;
+    background-color: #ededed;
+    height: auto;
+    display: flex;
+}
+
+.navbar__list{
+    display: flex;
+    gap: 15px;
+    font-size: 1em;
+    background-color: transparent;
+    color: #46a;
+}
+
+.list__item{
+    font-weight: bolder;
+}
+
+.list__item span{
+    font-size: 1.3em;
+}
+
+.list__item a{
+    width: auto;
+}
+
+.list__item a:hover{
+    background-color: transparent;
+    outline: 2px solid #468;
+
+}
+
+}
 
 
 /* Sona de Main */
 
 .main__container{
     min-width: 100%;
-    background-color: #cccc;
+    background-color: #aab5;
+    padding: 15px;
 }
 
 .data__container{
@@ -126,20 +182,238 @@ a{
     font-size: 3em;
     text-wrap: balance;
     margin-top: 20px;
+    text-align: center;
 }
 
 .title span {
-    color: #468;
+    color: #46a;
 }
 
 .data__container p{
     text-wrap: pretty;
-    font-size: 1.6em;
+    font-size: 1.3em;
     text-align: justify;
     padding: 10px;
     margin-top: 20px;
+    display: none;
 }
 
 .img__perfil{
     margin: auto;
+    user-select: none;
+}
+
+@container root (min-width: 700px){
+    
+.contenedor--central{
+    gap: 1.2em;
+}   
+
+.data__container{
+    width: clamp(300px, 40vw, 600px);
+    font-size: 1em;
+    order: 0;
+    
+}
+
+.title {
+    margin-top: 1em;
+    text-align: left;
+}
+
+.data__container p{
+    display: block;
+}
+
+}
+
+#Sobre__mi{
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.Sobre__mi-title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2rem;
+    color: #222d;
+}
+
+.Sobre__mi-title span{
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+#Sobre__mi p{
+    padding: 20px 0;
+    font-size: 1.3em;
+}
+
+/* Cronoetro */
+
+#proyectos__container{
+    min-height: 100dvh;
+    padding: 10px;
+}
+
+#proyectos__container .contenedor--central{
+    margin: 0;
+}
+
+
+#proyectos__container h2{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2rem;
+    color: #222d;
+}
+
+
+#proyectos__container span{
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+
+.grid__container{
+    flex-wrap: wrap;
+}
+
+.proyectos{
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    box-shadow: 0 0 5px 2px #000a;
+    width: 100%;
+}
+
+.proyectos:first-child{
+    grid-area: cronometro;
+}
+
+.proyectos:nth-child(2 ){
+    grid-area: citas;
+}
+
+.proyectos:nth-child(3) {
+    grid-area: hex;
+}
+
+.proyectos:nth-child(4) {
+    grid-area: lista;
+}
+
+.proyectos:nth-child(5) {
+    grid-area: rgb;
+}
+
+
+
+
+.proyecto__img{
+    border-radius: 5px 5px 0 0;
+    background-color: #46a;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+}
+
+.proyecto__img--cronometro{
+    background-image: url('../src/pag_cronometro.png');
+}
+
+
+.proyecto__img--cita{
+    background-image: url('../src/citas.png');
+}
+
+.proyecto__img--hex{
+    background-image: url('../src/hexadesimal.png');
+}
+
+.proyecto__img--list{
+    background-image: url('../src/lista_tareas.png');
+}
+
+.proyecto__img--RGB{
+    background-image: url('../src/RGB.png');
+}
+
+.text__container-proyecto{
+    padding: 8px 10px;
+}
+
+.proyectos h3 {
+    font-size: 1.7em;
+}
+.proyectos p {
+    font-size: 1.2em;
+}
+
+.proyecto__btn{
+    padding: 8px 25px;
+    font-size: 1.2em;
+    margin: 10px;
+    color: #ededed;
+    background-color: #57a;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+@container root (min-width: 700px){
+
+.grid__container{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "cronometro cronometro cronometro"
+    " rgb hex citas"
+    "lista lista lista"
+    ;
+}
+
+}
+
+footer{
+    background-color: #468;
+    color: #ededed;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 5px;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.footer-section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 0.7em;
 }
